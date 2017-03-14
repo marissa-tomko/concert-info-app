@@ -14,7 +14,7 @@
 
 ### Workflow
 
-#### Fork this repo, make commits as needed, and open a pull request.
+#### Clone this repo, make a branch, make commits as needed, and open a pull request.
 
 Some steps will require corresponding work in multiple files.  Additionally, you may have to overcome small hurdles not outlined within this document. You'll have to figure out what you need and what you don't as you go. Start small and complete features in an MVP behavior driven manner.  Commit after each release!
 
