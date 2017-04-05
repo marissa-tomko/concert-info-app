@@ -27,7 +27,7 @@ After you push, open a P.R.
 ### RELEASES
 
 #### Release 0 - Setup
-- **SETUP** Fork this repository and clone it down. It’s a blank Rails application with a seeds file prepopulated. Create a working branch for yourself and _git_ to it.
+- **SETUP** It’s a blank Rails application with a seeds file prepopulated. After you've cloned the repo, create a working branch for yourself and _git_ to it.
 
 #### Release 1 - Asset Pipeline
   - Create a new stylesheet called `styles.css`. Place it in the correct spot so that the asset pipleline picks it up. As you complete each vertical slice (Releases 3-8), add styles to this file so that your site isn't so plain.  At least make it structurally like the wireframes.
