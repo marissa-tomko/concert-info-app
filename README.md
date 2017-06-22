@@ -1,4 +1,4 @@
-# Phase 3 Assessment
+# Rails Checkpoint
 
 ### INSTRUCTIONS
 
