@@ -1,0 +1,8 @@
+<h1>Concerts!</h1>
+<br>
+<br>
+<h2>Upcoming Concerts</h2>
+
+<% @concerts.sort_by{|concert| concert.date}.each do |concert| %>
+<p><%= link_to "#{concert.band}", "/concerts/#{concert.id}" %> - <%= concert.venue %> on <%= concert.date.strftime('%m/%d/%Y') %> at <%= concert.start_time.strftime('%l:%M %p') %></p><br>
+<% end %>
