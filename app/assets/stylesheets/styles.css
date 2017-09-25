@@ -6,3 +6,11 @@
 #navigation {
   text-align: right;
 }
+
+#sign-up-form {
+  text-align: center;
+}
+
+#errors {
+  color: red;
+}
