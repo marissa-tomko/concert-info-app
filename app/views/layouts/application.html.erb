@@ -9,7 +9,11 @@
     <h1>Concerts!</h1>
 
     <div id='navigation'>
-      <p><%= link_to 'Login', '/sessions/new' %> <%= link_to 'Sign Up', '/users/new' %>  <%= link_to 'Home', '/' %></p>
+      <% if logged_in? %>
+        <p> <%= current_user.first_name %>  <%= link_to 'Logout', logout_path, method: :delete %> <%= link_to 'Home', root_url %></p>
+      <% else %>
+        <p><%= link_to 'Login', '/sessions/new' %> <%= link_to 'Sign Up', '/users/new' %>  <%= link_to 'Home', root_url %></p>
+      <% end %>
     </div>
   </head>
 

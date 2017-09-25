@@ -1,2 +1,13 @@
-<h1>Concerts#show</h1>
-<p>Find me in app/views/concerts/show.html.erb</p>
+<h3><%= @concert.band %></h3><br>
+<p>Location: <%= @concert.venue %></p>
+<p>Date: <%= @concert.date.strftime('%m/%d/%Y') %></p>
+<p>Time: <%= @concert.start_time.strftime('%l:%M %p') %></p><br>
+
+<h3>Attendees</h3>
+<% @concert.attendees.each do |attendee| %>
+  <% if current_user == attendee %>
+    <strong><%= attendee.first_name %> <%= attendee.last_name %></strong>
+  <% else %>
+    <p><%= attendee.first_name %> <%= attendee.last_name %></p>
+  <% end %>
+<% end %>
