@@ -1,1 +1,2 @@
-$(".list-attendees").append('<%= j render(partial: "concerts/attendee_details", locals: {attendance: @attendance}) %>')
+$("#attending-form").hide();
+$("#attending").append('<%= j render(partial: "concerts/attendees", locals: {person: current_user}) %>')

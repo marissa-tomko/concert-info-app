@@ -3,18 +3,22 @@
 <p>Date: <%= @concert.date.strftime('%m/%d/%Y') %></p>
 <p>Time: <%= @concert.start_time.strftime('%l:%M %p') %></p><br>
 
-<h3>Attendees</h3>
-<% @concert.attendees.each do |attendee| %>
-  <% if current_user == attendee %>
-    <strong><%= attendee.first_name %> <%= attendee.last_name %></strong>
-  <% else %>
-    <p><%= attendee.first_name %> <%= attendee.last_name %></p>
+<div id='attending'>
+  <h3>Attendees</h3>
+  <% @concert.attendees.each do |attendee| %>
+    <% if current_user == attendee %>
+      <strong><%= attendee.first_name %> <%= attendee.last_name %></strong>
+    <% else %>
+      <p><%= attendee.first_name %> <%= attendee.last_name %></p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
 
 <% if logged_in? && !@concert.attendees.include?(current_user)%>
-  <%= form_tag('/attendances', method: :post) do %>
-    <%= hidden_field :concert_id, id: "form", value: "#{@concert.id}" %>
-    <%= submit_tag "Attend" %>
-  <% end %>
+  <div id="attending-form">
+    <%= form_tag attendances_path, :method => "POST", :remote => true do %>
+      <%= hidden_field_tag "concert_id", @concert.id %>
+      <%= submit_tag "Attend" %>
+    <% end %>
+  </div>
 <% end %>

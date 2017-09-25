@@ -1,0 +1,5 @@
+<div id="attendee">
+  <% if current_user == person %>
+    <p class="current"><%= person.first_name %> <%= person.last_name %></p>
+  <% end %>
+</div>

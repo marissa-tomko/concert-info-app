@@ -18,3 +18,9 @@
 #errors {
   color: red;
 }
+
+.current {
+  font-weight: bolder;
+}
+
+

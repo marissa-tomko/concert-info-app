@@ -3,7 +3,7 @@ class AttendancesController < ApplicationController
 
   def create
     @attendance = Attendance.new(attend_params)
-    @attendance.user_id = current_user.id
+    @attendance.attendee_id = current_user.id
     @concert = @attendance.concert
     if @attendance.save
       respond_to do |format|
