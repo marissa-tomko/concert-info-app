@@ -1,2 +1,18 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div id='login-form'>
+  <%= render 'layouts/errors' %>
+  <h2>Login</h2>
+
+  <%= form_tag('/login', method: :post) do %>
+    <p>
+      <%= email_field_tag :email, params[:email], placeholder: :email %><br>
+    </p>
+
+    <p>
+      <%= password_field_tag :password, params[:password], placeholder: :password %><br>
+    </p>
+
+    <p>
+      <%= submit_tag "Login" %>
+    </p>
+  <% end %>
+</div>

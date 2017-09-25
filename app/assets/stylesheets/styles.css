@@ -11,6 +11,10 @@
   text-align: center;
 }
 
+#login-form {
+  text-align: center;
+}
+
 #errors {
   color: red;
 }

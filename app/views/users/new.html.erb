@@ -2,24 +2,20 @@
   <%= render 'layouts/errors' %>
   <h2>Sign Up</h2>
 
-  <%= form_for @user, url: {action: "create" } do |f| %>
+  <%= form_for @user, url: { action: "create" } do |f| %>
     <p>
-      <%= f.label :first_name %><br>
       <%= f.text_field :first_name, placeholder: true %><br>
     </p>
 
     <p>
-      <%= f.label :last_name %><br>
       <%= f.text_field :last_name, placeholder: true %><br>
     </p>
 
     <p>
-      <%= f.label :email %><br>
       <%= f.text_field :email, placeholder: true %><br>
     </p>
 
     <p>
-      <%= f.label :password %><br>
       <%= f.password_field :password, placeholder: true %><br>
     </p>
 
